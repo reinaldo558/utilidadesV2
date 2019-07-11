@@ -61,24 +61,8 @@ public class VariaveisComuns {
     private static Map<String, String> getExemplos() {
         final Map<String, String> exemplos = new HashMap<>();
 
-        exemplos.put("[BA] EncriptarPin / Ver modo autorizado", "BA&1234&5224990000002791");
-        exemplos.put("[NG] DecriptarPin / Ver modo autorizado", "NG&5224990000002791&41363");
-        exemplos.put("[CW] Gerar CVC", "CW&MC&5324730000045005&1409&101");
-        exemplos.put("[CY] Validar CVC", "CY&MC&806&5224990000002791&1703&999");
-        exemplos.put("[BU] Criar checkvalue", "BU&1&UCB028932B26FBB5FDB345659C30A9F04&001");
-        exemplos.put("[BE] Validar Pin", "BE&MC&E8477459C4A7A9C7&5224990000002791&69358");
-        exemplos.put("[02] Contar trocas de chave, tecban", "02");
-        exemplos.put("[99] Ver tags cadastradas para de55", "99&MC");
-        exemplos.put("[A0] Criar chave (e cadastrar como temporaria)", "A0&TB&T");
-        exemplos.put("[KQ] Validar ARQC", "KQ&MC&2012-06-31&1&5324740000015197&5F2A02098682025800950500000400009A031204229C01009F02060000000010009F10120110250000044000DAC100000000000000009F1A0200769F26086922116F04A923A99F2701809F360200A09F3704262669C1&000&0028");
-        exemplos.put("[GM] Encryptar senha", "GM&01&ctlm1234");
-        exemplos.put("[01] Activate Key", "01&MC");
-        exemplos.put("[A6] Change Key", "01&MC&D45142DAD34071213BE76D61013A3B6D&CAD6A0");
-        exemplos.put("[KU] Desbloqueio de chip / Troca de senha", "KU&MC&0&5224990000002791&86068424000000&0000");
-        exemplos.put("[JE] Decripta senha de transporta para passHsm", "JE&TB&5224990000002791&12345");
-        exemplos.put("[GM] Gera criptografia SHA1", "GM&01&1234");
-        exemplos.put("[98] Ver/Atualizar lista de chaves na memoria", "98&1");
-
+        // removed, may contain sensible information
+		
         return exemplos;
     }
     

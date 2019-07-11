@@ -18,12 +18,12 @@ public class LogProdEntity {
     public static final int TIPO_WEB_CATALINA = 1;
     public static final int TIPO_WEB_LOCALHOST = 2;
     public static final int TIPO_WEB_LOCALHOSTACCESS = 3;
-    public static final int TIPO_WEB_DOITCLIENT = 4;
-    public static final int TIPO_WEB_ABERTURA = 5;
-    public static final int TIPO_WEB_TELEMATICA = 6;
-    public static final int TIPO_WEB_WSCETELEM = 7;
-    public static final int TIPO_WEB_WSTELEM = 8;
-    public static final int TIPO_WEB_SMSCYBER = 9;
+    public static final int TIPO_WEB_xxxxxx = 4;
+    public static final int TIPO_WEB_xxx = 5;
+    public static final int TIPO_WEB_xxx = 6;
+    public static final int TIPO_WEB_xxx = 7;
+    public static final int TIPO_WEB_xxx = 8;
+    public static final int TIPO_WEB_SMSxxx = 9;
     public static final int TIPO_AUT_MASTER1 = 10;
     public static final int TIPO_AUT_MASTER2 = 11;
     public static final int TIPO_AUT_MASTER3 = 12;
@@ -53,23 +53,23 @@ public class LogProdEntity {
             case TIPO_WEB_LOCALHOSTACCESS:
                 criarLog_webLocalhostAccess(cal, qtDias);
                 break;
-            case TIPO_WEB_DOITCLIENT:
-                criarLog_webDoitClient(cal, qtDias);
+            case TIPO_WEB_xxxxxx:
+                criarLog_webxxxxxx(cal, qtDias);
                 break;
-            case TIPO_WEB_ABERTURA:
-                criarLog_webAbertura(cal, qtDias);
+            case TIPO_WEB_xxx:
+                criarLog_webxxx(cal, qtDias);
                 break;
-            case TIPO_WEB_TELEMATICA:
-                criarLog_webTelematica(cal, qtDias);
+            case TIPO_WEB_xxx:
+                criarLog_webxxx(cal, qtDias);
                 break;
-            case TIPO_WEB_WSCETELEM:
-                criarLog_webWscetelem(cal, qtDias);
+            case TIPO_WEB_xxx:
+                criarLog_webxxx(cal, qtDias);
                 break;
-            case TIPO_WEB_WSTELEM:
-                criarLog_webWstelem(cal, qtDias);
+            case TIPO_WEB_xxx:
+                criarLog_webxxx(cal, qtDias);
                 break;
-            case TIPO_WEB_SMSCYBER:
-                criarLog_webSmsCyber(cal, qtDias);
+            case TIPO_WEB_SMSxxx:
+                criarLog_webSmsxxx(cal, qtDias);
                 break;
             case TIPO_AUT_MASTER1:
                 break;
@@ -130,123 +130,123 @@ public class LogProdEntity {
         
     }
 
-    private void criarLog_webDoitClient(final Calendar cal, final int qtDias) {
-        arquivos.add("/logs/app/doit-client/doit-client-messages.log");
-        arquivos.add("/logs/app/doit-client/doit-client-to-server-messages.log");
+    private void criarLog_webxxxxxx(final Calendar cal, final int qtDias) {
+        arquivos.add("/logs/app/xxx-xxx/xxx-xxx-messages.log");
+        arquivos.add("/logs/app/xxx-xxx/xxx-xxx-to-server-messages.log");
         
         if (qtDias > 0) {
             for (int i = 0 ; i < qtDias ; i++) {
                 cal.add(Calendar.DAY_OF_MONTH, -1);                
-                arquivos.add("/logs/app/doit-client/doit-client-messages.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/doit-client/doit-client-to-server-messages.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/xxx-xxx/xxx-xxx-messages.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/xxx-xxx/xxx-xxx-to-server-messages.log."+anoMesDia(cal)+".*");
             }
         }
     }
 
-    private void criarLog_webAbertura(final Calendar cal, final int qtDias) {
-        arquivos.add("/logs/app/tomcat01/abertura/abertura.log");
-        arquivos.add("/logs/app/tomcat01/abertura/registerCrediary.log");
-        arquivos.add("/logs/app/tomcat01/abertura/aberturaTraf.log");
-        arquivos.add("/logs/app/tomcat01/abertura/registerInternetExpressPlus.log");
-        arquivos.add("/logs/app/tomcat01/abertura/registerElegibilidade.log");
-        arquivos.add("/logs/app/tomcat02/abertura/abertura.log");
-        arquivos.add("/logs/app/tomcat02/abertura/registerCrediary.log");
-        arquivos.add("/logs/app/tomcat02/abertura/aberturaTraf.log");
-        arquivos.add("/logs/app/tomcat02/abertura/registerInternetExpressPlus.log");
-        arquivos.add("/logs/app/tomcat02/abertura/registerElegibilidade.log");
+    private void criarLog_webxxx(final Calendar cal, final int qtDias) {
+        arquivos.add("/logs/app/tomcat01/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxxTraf.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxxTraf.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx.log");
                 
         if (qtDias > 0) {
             for (int i = 0 ; i < qtDias ; i++) {
                 cal.add(Calendar.DAY_OF_MONTH, -1);                
-                arquivos.add("/logs/app/tomcat01/abertura/abertura.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/abertura/registerInternetExpressPlus.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/abertura/aberturaTraf.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/abertura/registerCrediary.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/abertura/registerElegibilidade.log."+anoMesDia(cal)+".*");                
-                arquivos.add("/logs/app/tomcat02/abertura/abertura.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/abertura/registerInternetExpressPlus.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/abertura/aberturaTraf.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/abertura/registerCrediary.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/abertura/registerElegibilidade.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxxTraf.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx.log."+anoMesDia(cal)+".*");                
+                arquivos.add("/logs/app/tomcat02/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxxTraf.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx.log."+anoMesDia(cal)+".*");
             }
         }
     }
 
-    private void criarLog_webTelematica(final Calendar cal, final int qtDias) {
-        arquivos.add("/logs/app/tomcat01/cetelem/telematica-soap-message.log");
-        arquivos.add("/logs/app/tomcat01/cetelem/log4jroot");
-        arquivos.add("/logs/app/tomcat01/cetelem/integration");
-        arquivos.add("/logs/app/tomcat01/cetelem/business");
-        arquivos.add("/logs/app/tomcat01/cetelem/presentation");        
-        arquivos.add("/logs/app/tomcat02/cetelem/telematica-soap-message.log");
-        arquivos.add("/logs/app/tomcat02/cetelem/log4jroot");
-        arquivos.add("/logs/app/tomcat02/cetelem/integration");
-        arquivos.add("/logs/app/tomcat02/cetelem/business");
-        arquivos.add("/logs/app/tomcat02/cetelem/presentation");
+    private void criarLog_webxxx(final Calendar cal, final int qtDias) {
+        arquivos.add("/logs/app/tomcat01/xxx/xxx-soap-message.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx");
+        arquivos.add("/logs/app/tomcat01/xxx/business");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx");        
+        arquivos.add("/logs/app/tomcat02/xxx/xxx-soap-message.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx");
+        arquivos.add("/logs/app/tomcat02/xxx/business");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx");
 
         if (qtDias > 0) {
             for (int i = 0 ; i < qtDias ; i++) {
                 cal.add(Calendar.DAY_OF_MONTH, -1);                
-                arquivos.add("/logs/app/tomcat01/cetelem/integration."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/cetelem/presentation."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/cetelem/business."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/cetelem/telematica-soap-message.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/cetelem/log4jroot."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/cetelem/integration."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/cetelem/presentation."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/cetelem/business."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/cetelem/telematica-soap-message.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/cetelem/log4jroot."+anoMesDia(cal)+".*");                
+                arquivos.add("/logs/app/tomcat01/xxx/xxx."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/business."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx-soap-message.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/business."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx-soap-message.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx."+anoMesDia(cal)+".*");                
             }
         }
     }
 
-    private void criarLog_webWscetelem(final Calendar cal, final int qtDias) {
-        arquivos.add("/logs/app/tomcat01/wscetelem/wscetelem.log");
-        arquivos.add("/logs/app/tomcat01/wscetelem/wscetelemTraf.log");    
-        arquivos.add("/logs/app/tomcat02/wscetelem/wscetelem.log");
-        arquivos.add("/logs/app/tomcat02/wscetelem/wscetelemTraf.log");
+    private void criarLog_webxxx(final Calendar cal, final int qtDias) {
+        arquivos.add("/logs/app/tomcat01/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxxTraf.log");    
+        arquivos.add("/logs/app/tomcat02/xxx/xxx.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxxTraf.log");
         
         if (qtDias > 0) {
             for (int i = 0 ; i < qtDias ; i++) {
                 cal.add(Calendar.DAY_OF_MONTH, -1);
-                arquivos.add("/logs/app/tomcat01/wscetelem/wscetelemTraf.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/wscetelem/wscetelem.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/wscetelem/wscetelemTraf.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/wscetelem/wscetelem.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxxTraf.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxxTraf.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx.log."+anoMesDia(cal)+".*");
             }
         }
     }
 
-    private void criarLog_webWstelem(final Calendar cal, final int qtDias) {
-        arquivos.add("/logs/app/tomcat01/wstelem/wstelem-soap-message.log");
-        arquivos.add("/logs/app/tomcat01/wstelem/wstelem-root-logger.log");
-        arquivos.add("/logs/app/tomcat01/wstelem/generate-billet.log");
-        arquivos.add("/logs/app/tomcat02/wstelem/wstelem-soap-message.log");
-        arquivos.add("/logs/app/tomcat02/wstelem/wstelem-root-logger.log");
-        arquivos.add("/logs/app/tomcat02/wstelem/generate-billet.log");
+    private void criarLog_webxxx(final Calendar cal, final int qtDias) {
+        arquivos.add("/logs/app/tomcat01/xxx/xxx-soap-message.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx-root-logger.log");
+        arquivos.add("/logs/app/tomcat01/xxx/xxx-billet.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx-soap-message.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx-root-logger.log");
+        arquivos.add("/logs/app/tomcat02/xxx/xxx-billet.log");
         
         if (qtDias > 0) {
             for (int i = 0 ; i < qtDias ; i++) {
                 cal.add(Calendar.DAY_OF_MONTH, -1);
-                arquivos.add("/logs/app/tomcat01/wstelem/wstelem-root-logger.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/wstelem/wstelem-soap-message.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat01/wstelem/generate-billet.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/wstelem/wstelem-root-logger.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/wstelem/wstelem-soap-message.log."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/wstelem/generate-billet.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx-root-logger.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx-soap-message.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/xxx/xxx-billet.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx-root-logger.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx-soap-message.log."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/xxx/xxx-billet.log."+anoMesDia(cal)+".*");
             }
         }
     }
 
-    private void criarLog_webSmsCyber(final Calendar cal, final int qtDias) {
-        arquivos.add("/logs/app/tomcat01/sms/cyber-boleto");
-        arquivos.add("/logs/app/tomcat02/sms/cyber-boleto");
+    private void criarLog_webSmsxxx(final Calendar cal, final int qtDias) {
+        arquivos.add("/logs/app/tomcat01/sms/xxx-xxx");
+        arquivos.add("/logs/app/tomcat02/sms/xxx-xxx");
         if (qtDias > 0) {
             for (int i = 0 ; i < qtDias ; i++) {
                 cal.add(Calendar.DAY_OF_MONTH, -1);
-                arquivos.add("/logs/app/tomcat01/sms/cyber-boleto."+anoMesDia(cal)+".*");
-                arquivos.add("/logs/app/tomcat02/sms/cyber-boleto."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat01/sms/xxx-xxx."+anoMesDia(cal)+".*");
+                arquivos.add("/logs/app/tomcat02/sms/xxx-xxx."+anoMesDia(cal)+".*");
             }
         }
     }
