@@ -15,16 +15,22 @@ This project started while needing many simple information for my daily activiti
 With time, and me needing to have access to more than 30 different machines, the project became bigger and I even created a password manager in it, encrypting all passwords, and making this project start the remote connections already logged in for me whenever possible, so instead of having to memorize 30+ users and passwords, I needed only two, one for the windows/network and another for this program.
 
 Besides simple tasks on the PopUp menu, this program  have (had?):
+
 [TAB "Crypto"]
  - Connection and password management, on the left side a Tree View with all my registered remote connections divided by system, environment or type, on the right side some buttons to manage the connections, a set of buttons to show/hide information of the selected system, a set of buttons to manage the password, a set of buttons to open one or multiple connections with possibility to automatically open a putty, Unux shell, web browser or other personalized program, and a set of buttons to add or remove systems.
+ 
 [TAB "CPF"]
  - A panel with many possible ways to create CPFs (Person ID for Brazil), one or many, random or with a specific  prefix.
+ 
 [TAB "Direct"]
  - Before uploading the project here I removed all sensible information on this area. Here it was possible to remotely execute a set of business related commands on many different servers and get the results already formatted. This tab also has history of commands, templates, and some converters.
+ 
 [TAB "CVC"]
  - Other business related tab, to create or validate business related codes
+ 
 [TAB "StrRplc"]
  - Many business and technical ways to convert strings, simple words or phrases pasted direct into this window or direct into files.
+ 
 [TAB "Calendario"] (Calendar)
  - A Calendar view similar to any other calendar, showing a moth/year and its days, with previous/next selection, but showing both Gregorian Calendar and Julian Calendar. This tab also have some filters to quickly show a specific month/year.  
 
